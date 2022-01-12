@@ -3,36 +3,91 @@ import Head from 'next/head';
 import Layout from '@components/Layout';
 import Container from '@components/Container';
 
-import characters from '@data/characters.json';
-
 import styles from '@styles/Home.module.scss'
 
 export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Arcane Wiki</title>
-        <meta name="description" content="All the characters you love from Arcane!" />
+        <title>Spotify Re-Wrapped</title>
+        <meta name="description" content="Top artists and tracks for the last whatever period of time..." />
       </Head>
 
       <Container>
-        <h1 className="sr-only">Arcane Wiki</h1>
+        <h1 className="sr-only">Spotify Re-Wrapped</h1>
 
-        <h2 className="sr-only">Characters</h2>
+        <h2 className={styles.heading}>Top Artists</h2>
 
-        <ul className={styles.characters}>
-          {characters.map(character => {
-            return (
-              <li key={character.id}>
-                <a href={character.link}>
-                  <img width="280" src={character.image} alt={character.title} />
-                  <p className={styles.characterTitle}>
-                    { character.title }
-                  </p>
-                </a>
-              </li>
-            )
-          })}
+        <ul className={styles.items}>
+          <li>
+            <a href="https://www.blink182.com/">
+              <img width="280" src="/images/blink-182.jpg" alt="Artist Photo" />
+              <p className={styles.itemTitle}>
+                blink-182
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.blink182.com/">
+              <img width="280" src="/images/blink-182.jpg" alt="Artist Photo" />
+              <p className={styles.itemTitle}>
+                blink-182
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.blink182.com/">
+              <img width="280" src="/images/blink-182.jpg" alt="Artist Photo" />
+              <p className={styles.itemTitle}>
+                blink-182
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.blink182.com/">
+              <img width="280" src="/images/blink-182.jpg" alt="Artist Photo" />
+              <p className={styles.itemTitle}>
+                blink-182
+              </p>
+            </a>
+          </li>
+        </ul>
+
+        <h2 className={styles.heading}>Top Tracks</h2>
+
+        <ul className={styles.items}>
+          <li>
+            <a href="https://www.blink182.com/">
+              <img width="280" src="/images/dude-ranch.jpg" alt="Dude Ranch Album Cover" />
+              <p className={styles.itemTitle}>
+                Enthused
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.blink182.com/">
+              <img width="280" src="/images/dude-ranch.jpg" alt="Dude Ranch Album Cover" />
+              <p className={styles.itemTitle}>
+                Enthused
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.blink182.com/">
+              <img width="280" src="/images/dude-ranch.jpg" alt="Dude Ranch Album Cover" />
+              <p className={styles.itemTitle}>
+                Enthused
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.blink182.com/">
+              <img width="280" src="/images/dude-ranch.jpg" alt="Dude Ranch Album Cover" />
+              <p className={styles.itemTitle}>
+                Enthused
+              </p>
+            </a>
+          </li>
         </ul>
       </Container>
     </Layout>

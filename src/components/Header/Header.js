@@ -1,4 +1,5 @@
 import Container from '@components/Container';
+import SpotifyLogo from '@components/SpotifyLogo';
 
 import styles from './Header.module.scss';
 
@@ -7,7 +8,7 @@ const Header = () => {
     <header className={styles.header}>
       <Container className={styles.headerContainer}>
         <p className={styles.headerTitle}>
-          <img src="/images/logo.jpg" alt="Arcane" />
+          <SpotifyLogo /> Re-Wrapped
         </p>
       </Container>
     </header>
